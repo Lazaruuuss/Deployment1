@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'CSS/Footer_Support_Styles.css'%}">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="Homepage" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="Homepage" id="home-page">Home</a></li>
+                    <li class="navbar__item"><a href="About" id="about-page">About</a></li>
+                    <li class="navbar__item"><a href="Login" id="login-page">Login</a></li>
+                    <li class="navbar__item"><a href="Register" id="register-page">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <!--Support-->
+            <img class="first__heading" src="{% static 'MEDIA/Assets/Footer_Support.svg' %}" alt="">
+
+            <br>
+            
+            <p class="first__description">
+                Support
+            </p>
+
+            <!--Descriptions-->
+            <div class="first__item-box">
+
+                <h2>
+                    Help is on the way!
+                    <br>
+                    <br>
+                    Get in touch with our support team:
+                    <br>
+                    <br>
+                    <h2 class="tab">
+                        1. Email Support at help@dlls.com.pg
+                        <br>
+                        2. Call 773.353.8314 and leave us a message. We'll get back to you ASAP!
+                    </h2>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="Contact_Us">Contact Us</a></li>
+                <li class="list-inline-item"><a href="FAQs">FAQs</a></li>
+                <li class="list-inline-item"><a href="Sitemap">Sitemap</a></li>
+                <li class="list-inline-item"><a href="Privacy_Policy">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="Terms_and_Conditions">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="Support" class="active">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{% static 'JS/Footer_Support_Javascript.js' %}"></script>
+</body>
+
+</html>

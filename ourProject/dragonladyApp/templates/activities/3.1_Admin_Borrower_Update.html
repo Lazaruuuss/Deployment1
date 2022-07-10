@@ -1,0 +1,191 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'CSS/4_Register_Styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="1_Homepage.html" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="3.1_Admin_Borrower.html" class="active" id="admin-borrower">Borrower</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <section class="first__sect">
+                <div class="first__item">
+                    <div class="first__item__box">
+                        <div class="first__row">
+                            <div class="form-center">
+                                <form class="first__fieldset" id="form" method="POST" action="">
+                                    <!-- Security token -->
+                                    {% csrf_token %}
+                                    <!--Headings and Description-->
+                                    <h1>Edit Borrower Account</h1>
+                                    <h4>Editing {{user.first_name}} {{user.last_name}}'s Account</h4>
+
+                                    <!--First Name-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="firstname">First Name:</label>
+                                        <br>
+                                        {{dragonladyApp.first_name}}
+                                    </div>
+
+                                    <br>
+
+                                    <!--Middle Name-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="middlename">Middle Name:</label>
+                                        <br>
+                                        {{dragonladyApp.middle_name}} 
+                                    </div>
+
+                                    <br>
+
+                                    <!--Surname-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="surname">Surname:</label>
+                                        <br>
+                                        {{dragonladyApp.last_name}}
+                                    </div>
+
+                                    <br>
+
+                                    <!--Age-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="age">Age:</label>
+                                        <br>
+                                        {{dragonladyApp.age}}
+                                    </div>
+
+                                    <br>
+
+                                    <!--Birthday-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="bday">Birthday:</label>
+                                        <br>
+                                        {{dragonladyApp.birthday}}
+                                    </div>
+
+                                    <br>  
+
+                                    <!--Gender-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="gender">Gender:</label>
+                                        <br>
+                                        {{dragonladyApp.gender}}                                 
+                                    </div>
+
+                                    <br>
+
+                                    <!--Email-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="email">Email Address:</label>
+                                        <br>
+                                        {{dragonladyApp.username}}
+                                    </div>
+
+                                    <br> 
+                                    
+                                    <!--Home Address-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="hadd">Home Address:</label>
+                                        <br>
+                                        {{dragonladyApp.home_address}}
+                                    </div>
+
+                                    <br>
+
+                                    <!--Update Account Button-->
+                                    <div class="first__labels">
+                                        <input class="first__submit-button" type="submit" value="Update">
+                                    </div>
+                                    <br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="Footer_Contact_Us.html">Contact Us</a></li>
+                <li class="list-inline-item"><a href="Footer_FAQs.html">FAQs</a></li>
+                <li class="list-inline-item"><a href="Footer_Sitemap.html">Sitemap</a></li>
+                <li class="list-inline-item"><a href="Footer_Privacy_Policy.html">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="Footer_Terms_and_Conditions.html">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="Footer_Support.html">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{% static 'JS/4_Register_Javascript.js' %}"></script>
+</body>
+
+</html>

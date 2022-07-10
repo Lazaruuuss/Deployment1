@@ -1,0 +1,157 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'CSS/3_Login_Styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="Homepage" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="Homepage" id="home-page">Home</a></li>
+                    <li class="navbar__item"><a href="About" id="about-page">About</a></li>
+                    <li class="navbar__item"><a href="Login" class="active" id="login-page">Login</a></li>
+                    <li class="navbar__item"><a href="Register" id="register-page">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <!--Dragonlady Logo-->
+            <img src="{% static 'MEDIA/Assets/Dragonlady_Logo.svg' %}" alt="header-img" width="100%">
+
+            <section class="first-section">
+                <div class="forms">
+                    <!--Admin Login Window-->
+                    <div class="form-wrapper is-active">
+                        <!--Switcher Button-->
+                        <button type="button" class="switcher switcher-admin">
+                            Admin
+                            <span class="underline"></span>
+                        </button>
+
+                        <form class="form form-admin" method="post" action="AdminLogin">
+                            {% csrf_token %}
+                            <fieldset>
+                                <div class="input-block">
+                                    <!--Email-->
+                                    <label for="username">Email Address</label>
+                                    {{form.username}}
+                                    <!--Admin Code-->
+                                    <label for="admin_password">Password</label>
+                                    {{form.password}}
+                                </div>
+                                <!--Admin Login Button-->
+                                <button id="admin_btn" type="submit" class="btn-admin">LOGIN</button>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <!--Borrower Login Window-->
+                    <div class="form-wrapper">
+                        <!--Switcher Button-->
+                        <button type="button" class="switcher switcher-borrower">
+                            Borrower
+                            <span class="underline"></span>
+                        </button>
+
+                        <form class="form form-borrower" method="POST" action="Login">
+                            {% csrf_token %}
+                            <fieldset>  
+                                <div class="input-block">
+                                    <!--Email-->
+                                    <label for="username">Email Address</label>
+                                    {{form.username}}
+
+                                    <br>
+
+                                    <!--Borrower Code-->
+                                    <label for="password">Password</label>
+                                    {{form.password}}               
+                                </div>
+                                <!--Borrower Login Button-->
+                                <button id="borrower_btn" type="submit" class="btn-borrower">LOGIN</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="Contact_Us">Contact Us</a></li>
+                <li class="list-inline-item"><a href="FAQs">FAQs</a></li>
+                <li class="list-inline-item"><a href="Sitemap">Sitemap</a></li>
+                <li class="list-inline-item"><a href="Privacy_Policy">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="Terms_and_Conditions">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="Support">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{% static 'JS/3_Login_Javascript.js' %}"></script>
+    
+</body>
+
+</html>

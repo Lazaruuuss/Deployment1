@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'CSS/3.2_Footer_Terms_and_Conditions_Styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="Borrower_Home" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="Borrower_Home" id="borrower-home">Home</a></li>
+                    <li class="navbar__item"><a href="Borrower_Loan" id="borrower-loan">Loan</a></li>
+                    <li class="navbar__item"><a href="Borrower_Payment" id="borrower-payment">Payment</a></li>
+                    <li class="navbar__item"><a href="Borrower_History" id="borrower-history">History</a></li>
+                    <li class="navbar__item"><a href="Homepage" id="borrower-logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <!--Terms and Conditions-->
+            <img class="first__heading" src="{% static 'MEDIA/Assets/Footer_Terms_and_Condition.svg' %}" alt="">
+
+            <br>
+            
+            <p class="first__description">
+                Terms and Conditions
+            </p>
+
+            <!--Descriptions-->
+            <div class="first__item-box">
+                <hr>
+                <br>
+                
+                <p>
+                    Welcome to the Dragonlady Loaning System Website (www.dragonladyloaningsystem.com).
+                    By accessing the Dragonlady website, the user agrees to comply with and be bound by the following
+                    terms and conditions of use.
+                </p>
+
+                <br>
+
+                <p class="tab">
+                    1. By entering this website, user is giving consent to Dragonlady to collect non-identifiable information in order
+                    to track and serve relevant contents.
+                    <br>
+                    <br>
+                    2. The Dragonlady Website is frequently updated and enhanced. New content is added as it becomes available.
+                    <br>
+                    <br>
+                    3. The content of the pages of this website is for the user's general information only and does not form the basis for
+                    personal investtment or important decisions. These are in no way substitutes for individual professional advice from financial
+                    consultants or securities analysts tailored to individual investors.
+                    <br>
+                    <br>
+                    4. Dragonlady shall not be liable for any consequences resulting from the use of any of the information or materials found in this
+                    website. It shall be the user's responsibility to check whether or not the services or information available through this website meet
+                    specific requirements or if saaid information is accurate, current or updated.
+                    <br>
+                    <br>
+                    5. This website contains material which is owned by or licensed to Dragonlady. This material includes, but is not limited to, the logo, design,
+                    layout, look, appearance, and graphics. Reproduction or use of said materials in any format, digital or otherwise, for purposes of promotion,
+                    publication, display or distribution outside Dragonlady is prohibited without a writtten permission from Dragonldy. Unauthorized use of this website
+                    may give rise to a claim for damages and/or be a criminal offense.
+                    <br>
+                    <br>
+                    6. If the borrower fails to make the payment by the due date, a penalty of 5,000 pesos will be imposed. This is predicated on both the borrower and the lender signing a formal contract.
+                    <br>
+                    <br>
+                    7. This content of this website is subject to change without notice.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="Borrower_Contact_Us">Contact Us</a></li>
+                <li class="list-inline-item"><a href="Borrower_FAQs">FAQs</a></li>
+                <li class="list-inline-item"><a href="Borrower_Sitemap">Sitemap</a></li>
+                <li class="list-inline-item"><a href="Borrower_Privacy_Policy">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="Borrower_Terms_and_Conditions" class="active">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="Borrower_Support">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{% static 'JS/3.2_Footer_Terms_and_Conditions_Javascript.js' %}"></script>
+</body>
+
+</html>

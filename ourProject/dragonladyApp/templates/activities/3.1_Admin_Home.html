@@ -1,0 +1,218 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'CSS/3.2_Borrower_Home_Styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="3.1_Admin_Home.html" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="3.1_Admin_Home.html" class="active" id="admin-home">Home</a></li>
+                    <li class="navbar__item"><a href="Admin_Borrower" id="admin-borrower">Borrower</a></li>
+                    <li class="navbar__item"><a href="Admin_Loan" id="admin-loan">Loan</a></li>
+                    <li class="navbar__item"><a href="Admin_Payment" id="admin-payment">Payment</a></li>
+                    <li class="navbar__item"><a href="{% url 'Logout' %}" id="admin-logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <!--Dragonlady Logo-->
+            <img class="first__heading" src="{% static 'MEDIA/Assets/Dragonlady_Logo.svg' %}" alt="">
+
+            <br>
+
+            <p class="first__description">
+                Welcome, Admin!
+            </p>
+        </div>
+    </div>
+
+    <!-- Second Section -->
+    <div class="second" id="second-section">
+        <div class="second__container">
+            <div class="second__wrapper">
+                <!--Calendar-->
+                <div class="second__card">
+                    <div class="container">
+                        <div class="calendar">
+                            <!--Month-->
+                            <div class="month">
+                                <i class="fas fa-angle-left prev"></i>
+                                <div class="date">
+                                <h1></h1>
+                                <p></p>
+                                </div>
+                                <i class="fas fa-angle-right next"></i>
+                            </div>
+
+                            <!--Weekdays-->
+                            <div class="weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+
+                            <!--Days-->
+                            <div class="days">
+                                <div class="prev-date">26</div>
+                                <div class="prev-date">27</div>
+                                <div class="prev-date">28</div>
+                                <div class="prev-date">29</div>
+                                <div class="prev-date">30</div>
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div>19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div>31</div>
+                                <div class="next-date">1</div>
+                                <div class="next-date">2</div>
+                                <div class="next-date">3</div>
+                                <div class="next-date">4</div>
+                                <div class="next-date">5</div>
+                                <div class="next-date">6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Calculator-->
+                <div class="second__card">
+                    <div class="calculator-grid">
+                        <!--Output-->
+                        <div class="output">
+                            <div data-previous-operand class="previous-operand"></div>
+                            <div data-current-operand class="current-operand"></div>
+                        </div>
+
+                        <!--Keys-->
+                        <button data-all-clear class="span-two">AC</button>
+                        <button data-delete>DEL</button>
+                        <button data-operation>÷</button>
+                        <button data-number>1</button>
+                        <button data-number>2</button>
+                        <button data-number>3</button>
+                        <button data-operation>*</button>
+                        <button data-number>4</button>
+                        <button data-number>5</button>
+                        <button data-number>6</button>
+                        <button data-operation>+</button>
+                        <button data-number>7</button>
+                        <button data-number>8</button>
+                        <button data-number>9</button>
+                        <button data-operation>-</button>
+                        <button data-number>.</button>
+                        <button data-number>0</button>
+                        <button data-equals class="span-two">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="Admin_Contact_Us">Contact Us</a></li>
+                <li class="list-inline-item"><a href="Admin_FAQs">FAQs</a></li>
+                <li class="list-inline-item"><a href="Admin_Sitemap">Sitemap</a></li>
+                <li class="list-inline-item"><a href="Admin_Privacy_Policy">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="Admin_Terms_and_Conditions">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="Admin_Support">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{% static 'JS/3.1_Admin_Home_Javascript.js' %}"></script>
+</body>
+
+</html>

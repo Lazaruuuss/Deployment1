@@ -1,0 +1,204 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'CSS/3.1_Footer_FAQs_Styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="3.1_Admin_Home.html" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="3.1_Admin_Home.html" id="admin-home">Home</a></li>
+                    <li class="navbar__item"><a href="Admin_Borrower" id="admin-borrower">Borrower</a></li>
+                    <li class="navbar__item"><a href="Admin_Loan" id="admin-loan">Loan</a></li>
+                    <li class="navbar__item"><a href="Admin_Payment" id="admin-payment">Payment</a></li>
+                    <li class="navbar__item"><a href="Homepage" id="admin-logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <!--FAQs-->
+            <img class="first__heading" src="{% static 'MEDIA/Assets/Footer_FAQs.svg' %}" alt="">
+
+            <br>
+            
+            <p class="first__description">
+                FAQS
+            </p>
+            <br>
+            
+            <!--Descriptions-->
+            <div class="first__description1">
+                <h3>
+                    How likely am I to be accepted for a loan?
+                    <br>
+                    
+                        <p>
+                            The only way to find out if you'll be accepted for a loan is to apply.
+                            Moreover, the lender will be checking if you have a previous balance, if you don't have, your application for a loan would likely be accepted.
+                        </p>
+    
+                    <br>
+                    What if my financial circumstances change during a loans term?
+                    <br>
+                    
+                        <p>
+                            Even if your financial circumstances chang during a loans term, you can just approach the lender.
+                            The contacts are in the Contact Us section. All information on howw to reach the lender caan be seen under that section.
+                        </p>
+    
+                    <br>
+                    How often can I apply for a loan?
+                    <br>
+                    
+                        <p>
+                            You can apply for a loan as long you don't have a current balance that you are not yet paid.
+                            It is more likely that your appllication will be disapproved if you have a current unpaid loan.
+                        </p>
+    
+                    <br>
+                    What is the minimum/maximum loan amount that may be granted to borrowers?
+                    <br>
+                    
+                        <p>
+                            The minimum amount that can be loaned is Php 500, while the maximum amount that can be granted to the borrowers is Php 100,000.   
+                        </p>
+    
+                    <br>
+                    How long do I need to pay the loan (full life of the loan)?
+                    <br>
+                    
+                        <p>
+                            The life of the loan depends on the amount of money you applied for.
+                        </p>
+    
+                    <br>
+                    For what purposes can the money I borrow be used for?
+                    <br>
+                    
+                        <p>
+                            You can use the money you borrowed for any reasons you deemed necessary to use for.
+                            The lender doesn't need to know where you will use the money for.
+                        </p>
+    
+                    <br>
+                    What are the different loan terms I can apply for?
+                    <br>
+                    
+                        <p>
+                            It varies, but the loan terms can be seen when you try to apply for a loan.
+                        </p>
+    
+                    <br>
+                    What is the interest rate?
+                    <br>
+                    
+                        <p>
+                            The interest rate is lower compared to most loaning companies.
+                            The ratte can also be seen when you ttry to applly for a loan.
+                        </p>
+    
+                    <br>
+                    What will be my monthly repayment?
+                    <br>
+                    
+                        <p>
+                            The monthly payment will depend on the amount of money you borrowed.
+                        </p>
+    
+                    <br>
+                    What are my payment options?
+                    <br>
+                    
+                        <p>
+                            Since the payment options improved, we now accept payments via GCash, PayMaya, Paypal, BDO, and of course, the traditional walk-in.
+                        </p>
+    
+                    <br>
+                    How quickly will I receive the funds if my loan is approved?
+                    <br>
+                    
+                        <p>
+                            Once the loan was approved, you will immediately get a text message that your loan is approved.
+                            By that, you will receive the money you need through the mode of loan transfer you inputted when you applied for a loan.    
+                        </p>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="Admin_Contact_Us">Contact Us</a></li>
+                <li class="list-inline-item"><a href="Admin_FAQs" class="active">FAQs</a></li>
+                <li class="list-inline-item"><a href="Admin_Sitemap">Sitemap</a></li>
+                <li class="list-inline-item"><a href="Admin_Privacy_Policy">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="Admin_Terms_and_Conditions">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="Admin_Support">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{% static 'JS/3.1_Footer_FAQs_Javascript.js' %}"></script>
+
+</html>

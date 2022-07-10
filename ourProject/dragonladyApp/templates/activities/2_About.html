@@ -1,0 +1,151 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'CSS/2_About_Styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="Homepage" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="Homepage" id="home-page">Home</a></li>
+                    <li class="navbar__item"><a href="About" class="active" id="about-page">About</a></li>
+                    <li class="navbar__item"><a href="Login" id="login-page">Login</a></li>
+                    <li class="navbar__item"><a href="Register" id="register-page">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <!--About-->
+            <img class="first__heading" src="{% static 'MEDIA/Assets/2_About.svg' %}" alt="">
+
+            <br>
+            
+            <p class="first__description">
+                About
+            </p>
+            <br>
+            <p class="first__description1">
+                Dragonlady Loaning System provides a service of lending money to those who need it, locally.
+                <br>
+                Formed in the year 2020, Dragonlady has earned a unique reputation for its service.
+                <br>
+                Serving a large number of borrowers around the area in just a span of months.
+            </p>
+        </div>
+    </div>
+
+    <!-- Second Section -->
+    <div class="second" id="second-section">
+        <div class="second__container">
+            <div class="second__wrapper">
+                <!--Fast Transaction-->
+                <div class="second__card">
+                    <img src="{% static 'MEDIA/Assets/2.1_Mission.svg' %}" alt="">
+                    <br>
+                    <h2>Mission</h2>
+                    <p>
+                        Dragonlady Loaning System is a locally owned, locally loaned community that provides
+                        a variety of core financial services to businesses, professionals, and individuals.
+                        We promise our customers immediate, direct access to our loaning decision makers and
+                        deliver the finest personalized service in the industry. Dragonlady has committed
+                        people and resources to enrich the communities where we live and work. Because trust
+                        is our most important commodity, we are focused on building and sustaining long-term
+                        generational relationships with our customers, our community, our employees, and our
+                        shareholders. In every transaction, You Have Us.
+                    </p>
+                </div>
+
+                <!--New & Improved Mode of Payment-->
+                <div class="second__card">
+                    <img src="{% static 'MEDIA/Assets/2.2_Vision.svg' %}" alt="">
+                    <br>
+                    <h2>Vision</h2>
+                    <p>
+                        We aspire to become the locally owned, independent community loaning service of choice
+                        for small and medium-sized businesses, professionals, and individuals in the Philippines.
+                        We will combine steady growth, consistent earnings, and firm control of risk factors to
+                        provide safety for our borrowers. Our people will be the difference in establishing
+                        consistency in earnings and enhanced shareholder value.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="Contact_Us">Contact Us</a></li>
+                <li class="list-inline-item"><a href="FAQs">FAQs</a></li>
+                <li class="list-inline-item"><a href="Sitemap">Sitemap</a></li>
+                <li class="list-inline-item"><a href="Privacy_Policy">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="Terms_and_Conditions">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="Support">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{% static 'JS/2_About_Javascript.js'%}"></script>
+</body>
+
+</html>
